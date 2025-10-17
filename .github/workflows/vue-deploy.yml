@@ -1,4 +1,4 @@
-name: 🚀 Deploy Vue App to GitHub Pages
+name: Deploy Vue App to GitHub Pages
 
 on:
   push:
@@ -14,21 +14,21 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: 📥 Checkout Repository
+      - name:  heckout Repository
         uses: actions/checkout@v4
 
-      - name: 🧰 Setup Node.js
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 18
 
-      - name: 📦 Install Dependencies
+      - name: Install Dependencies
         run: npm install
 
-      - name: 🛠️ Build Vue App
+      - name: Build Vue App
         run: npm run build
 
-      - name: 🚀 Deploy to GitHub Pages
+      - name:  Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
         with:
           path: dist
